@@ -1,9 +1,9 @@
 .card-container {
 	color: white;
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: "Bebas Neue", sans-serif;
 	font-size: 24px;
 	border-radius: 12px;
-	background-color: #ED0000;
+	background-color: #ed0000;
 	height: 220px;
 	width: 400px;
 	display: flex;
@@ -27,7 +27,7 @@
 	align-items: center;
 }
 
-.card-middle>div {
+.card-middle > div {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
@@ -36,6 +36,7 @@
 
 .card-footer {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
-	height: 30%;
+	height: 40%;
 }

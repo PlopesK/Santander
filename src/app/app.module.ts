@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardBoxComponent } from './components/card-box/card-box.component';
 import { CarouselItemsComponent } from './components/carousel-items/carousel-items.component';
 import { AmountBoxComponent } from './components/amount-box/amount-box.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { AmountBoxComponent } from './components/amount-box/amount-box.component
   CardBoxComponent,
   CarouselItemsComponent,
   AmountBoxComponent,
+  FooterComponent,
 	],
 	imports: [
 		BrowserModule,
