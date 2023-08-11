@@ -3,6 +3,10 @@
 	align-items: center;
 }
 
+.carousel-content {
+	flex-direction: row;
+}
+
 .carousel {
 	display: flex;
 	overflow: hidden;
@@ -17,7 +21,6 @@
 	align-items: center;
 	transition: transform 0.3s ease-in-out;
 }
-
 
 .carousel-item.active {
 	transform: scale(1.1);
@@ -38,7 +41,7 @@
 	border-radius: 4px;
 	box-shadow: 0 2px 8px -2px rgba(34, 34, 34, 0.4);
 	cursor: pointer;
-	transition:transform .6s ease-in-out;
+	transition: transform 0.6s ease-in-out;
 }
 
 .text {
@@ -67,9 +70,9 @@
 }
 
 .control-button.previous {
-	background-image: url('../../../assets/arrow-left.png');
+	background-image: url("../../../assets/arrow-left.png");
 }
 
 .control-button.next {
-	background-image: url('../../../assets/arrow-right.png');
+	background-image: url("../../../assets/arrow-right.png");
 }

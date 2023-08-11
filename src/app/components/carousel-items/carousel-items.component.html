@@ -1,3 +1,4 @@
+<h1>Take a look on everything we have!</h1>
 <div class="carousel-container">
 	<div class="carousel-controls">
 		<button class="control-button previous" (click)="moveLeft()"></button>
@@ -7,8 +8,8 @@
 		[ngClass]="{'active': i === activeIndex}"> -->
 		<div class="carousel-item" *ngFor="let item of visibleItems; let i = index">
 			<div class="square">
-				<div class="icon">{{item.icon}}</div>
-				<div class="text">{{item.text}}</div>
+				<div class="icon"><img src="{{ item.icon }}" /></div>
+				<div class="text">{{ item.text }}</div>
 			</div>
 		</div>
 	</div>
