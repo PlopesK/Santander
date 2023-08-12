@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
 	selector: 'app-carousel-items',
 	templateUrl: './carousel-items.component.html',
-	styleUrls: ['./carousel-items.component.css'],
+	styleUrls: ['./carousel-items.component.css', './carousel.scss'],
+	animations: [
+		trigger('carouselAnimation', [
+			transition(':increment, :decrement', [
+				style({ transform: 'translateX({{ i * 100 }}%)' }),
+				animate(
+					'300ms ease-out',
+					style({ transform: 'translateX({{ (i - activeIndex) * 100 }}%)' })
+				),
+			]),
+		]),
+	],
 })
 export class CarouselItemsComponent {
 	visibleItems: { text: string; icon: string }[] = [];
@@ -18,7 +30,7 @@ export class CarouselItemsComponent {
 		},
 		{
 			text: 'Transferências',
-			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/23-02-28_141604_M_ic_schedule_spending.svg',
+			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-16_181316_M_icon-portabilidade-santander.svg',
 		},
 		{
 			text: 'Pagamentos',
@@ -34,10 +46,12 @@ export class CarouselItemsComponent {
 		},
 		{
 			text: 'Outros',
-			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/23-08-07_171932_M_ic_exchange_48.svg',
+			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/21-06-11_134956_M_ic-id-santander.svg',
 		},
 	];
 	activeIndex = 0;
+	initialOffset = 0;
+	finalOffset = 0;
 
 	ngOnInit() {
 		this.updateVisibleItems();
@@ -51,6 +65,8 @@ export class CarouselItemsComponent {
 	}
 
 	moveLeft() {
+		this.initialOffset = 100;
+		this.finalOffset = 0;
 		if (this.activeIndex > 0) {
 			this.activeIndex--;
 			this.updateVisibleItems();
@@ -61,6 +77,8 @@ export class CarouselItemsComponent {
 	}
 
 	moveRight() {
+		this.initialOffset = -100;
+		this.finalOffset = 0;
 		if (this.activeIndex < this.items.length - 3) {
 			this.activeIndex++;
 			this.updateVisibleItems();

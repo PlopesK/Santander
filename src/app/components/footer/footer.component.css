@@ -1,24 +1,37 @@
 footer {
 	position: static;
-	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	background-color: #222;
 	color: white;
 	width: 100%;
+	padding: 10px 40px;
+	letter-spacing: -0.02em;
+	line-height: 1.8;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	font-family: "SantanderHeadlineRegular", sans-serif;
 }
 
 footer a {
 	color: white;
 }
 
-img {
-	max-width: 100%;
-}
-
 p {
 	font-size: 14px;
 	margin: 10px;
+}
+
+hr {
+	border: 0.7px solid white !important;
+	width: 95%;
+	align-self: center;
+	margin-bottom: 10px;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
 }
 
 .icon {
@@ -31,9 +44,40 @@ p {
 	display: flex;
 	flex-direction: column;
 	text-align: justify;
+	max-width: 100%;
 	margin: 15px;
 }
 
 .column h1 {
+	font-size: 18px;
 	font-weight: bold;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+
+.row img:hover {
+	transform: scale(1.1);
+}
+
+.row img {
+	cursor: pointer;
+	transition: transform 0.6s ease-in-out;
+}
+
+@media (max-width: 800px) {
+	.column {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: baseline;
+		margin: 0;
+	}
+
+	.row {
+		letter-spacing: -0.02em;
+	}
 }

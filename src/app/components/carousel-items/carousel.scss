@@ -1,0 +1,67 @@
+@mixin scrollbars(
+	$size,
+	$foreground-color,
+	$background-color: mix($foreground-color, white, 50%)
+) {
+	// For Google Chrome
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $foreground-color;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $background-color;
+	}
+
+	// For Internet Explorer
+	& {
+		scrollbar-face-color: $foreground-color;
+		scrollbar-track-color: $background-color;
+	}
+}
+
+.sc-prev,
+.sc-next {
+	cursor: pointer;
+	padding: 15px;
+	margin: 0 5px;
+	border-radius: 10px;
+	color: #504747;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.5s ease;
+}
+
+.sc-next {
+	right: 0;
+}
+
+.sc-prev:hover,
+.sc-next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.sc-flex-container {
+	position: relative;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.sc-flex-arrow {
+	flex: 1;
+	text-align: center;
+}
+
+.sc-prev-arrow-order {
+	order: -1;
+}
+
+.sc-next-arrow-order {
+	order: 1;
+}

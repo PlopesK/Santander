@@ -1,11 +1,6 @@
 <h1>Take a look on everything we have!</h1>
 <div class="carousel-container">
-	<div class="carousel-controls">
-		<button class="control-button previous" (click)="moveLeft()"></button>
-	</div>
-	<div class="carousel">
-		<!-- <div class="carousel-item" *ngFor="let item of visibleItems; let i = index"
-		[ngClass]="{'active': i === activeIndex}"> -->
+	<div class="carousel" [@carouselAnimation]="activeIndex">
 		<div class="carousel-item" *ngFor="let item of visibleItems; let i = index">
 			<div class="square">
 				<div class="icon"><img src="{{ item.icon }}" /></div>
@@ -13,7 +8,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="carousel-controls">
-		<button class="control-button next" (click)="moveRight()"></button>
+	<div class="sc-flex-arrow sc-prev-arrow-order">
+		<a class="sc-prev" (click)="moveLeft()">&#10094;</a>
+	</div>
+	<div class="sc-flex-arrow sc-next-arrow-order">
+		<a class="sc-next" (click)="moveRight()">&#10095;</a>
 	</div>
 </div>

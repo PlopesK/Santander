@@ -10,6 +10,8 @@ body {
 	font-family: "Muli";
 	background-color: #f2f1f6;
 	font-size: 16px;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 .shadow-box {

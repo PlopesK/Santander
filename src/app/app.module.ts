@@ -12,24 +12,26 @@ import { CardBoxComponent } from './components/card-box/card-box.component';
 import { CarouselItemsComponent } from './components/carousel-items/carousel-items.component';
 import { AmountBoxComponent } from './components/amount-box/amount-box.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  HomeComponent,
-  HeaderComponent,
-  CardBoxComponent,
-  CarouselItemsComponent,
-  AmountBoxComponent,
-  FooterComponent,
+		HomeComponent,
+		HeaderComponent,
+		CardBoxComponent,
+		CarouselItemsComponent,
+		AmountBoxComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		SvgComponentsModule,
-		HttpClientModule
+		HttpClientModule,
+		BrowserAnimationsModule,
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
