@@ -1,29 +1,3 @@
-@mixin scrollbars(
-	$size,
-	$foreground-color,
-	$background-color: mix($foreground-color, white, 50%)
-) {
-	// For Google Chrome
-	&::-webkit-scrollbar {
-		width: $size;
-		height: $size;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background: $foreground-color;
-	}
-
-	&::-webkit-scrollbar-track {
-		background: $background-color;
-	}
-
-	// For Internet Explorer
-	& {
-		scrollbar-face-color: $foreground-color;
-		scrollbar-track-color: $background-color;
-	}
-}
-
 .sc-prev,
 .sc-next {
 	cursor: pointer;
@@ -64,4 +38,8 @@
 
 .sc-next-arrow-order {
 	order: 1;
+}
+
+.sc-flex-arrow:active {
+	transform: scale(0.9) !important; /* Safari */
 }

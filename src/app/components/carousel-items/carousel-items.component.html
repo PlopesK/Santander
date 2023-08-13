@@ -2,10 +2,10 @@
 <div class="carousel-container">
 	<div class="carousel">
 		<div class="carousel-item" *ngFor="let item of visibleItems; let i = index">
-			<div class="square">
+			<figure class="square">
 				<div class="icon"><img src="{{ item.icon }}" /></div>
 				<div class="text">{{ item.text }}</div>
-			</div>
+			</figure>
 		</div>
 	</div>
 	<div class="sc-flex-arrow sc-prev-arrow-order">

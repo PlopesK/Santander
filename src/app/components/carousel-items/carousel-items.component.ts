@@ -50,8 +50,6 @@ export class CarouselItemsComponent {
 		},
 	];
 	activeIndex = 0;
-	initialOffset = 0;
-	finalOffset = 0;
 
 	ngOnInit() {
 		this.updateVisibleItems();
