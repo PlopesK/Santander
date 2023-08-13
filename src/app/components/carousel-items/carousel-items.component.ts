@@ -65,8 +65,6 @@ export class CarouselItemsComponent {
 	}
 
 	moveLeft() {
-		this.initialOffset = 100;
-		this.finalOffset = 0;
 		if (this.activeIndex > 0) {
 			this.activeIndex--;
 			this.updateVisibleItems();
@@ -77,8 +75,6 @@ export class CarouselItemsComponent {
 	}
 
 	moveRight() {
-		this.initialOffset = -100;
-		this.finalOffset = 0;
 		if (this.activeIndex < this.items.length - 3) {
 			this.activeIndex++;
 			this.updateVisibleItems();
