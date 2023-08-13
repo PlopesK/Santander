@@ -1,3 +1,10 @@
+.container {
+	display: block;
+	height: 500px;
+	width: 500px;
+	padding: 2em;
+}
+
 .content-container {
 	margin-top: 100px;
 	padding: 5px 40px;
@@ -45,6 +52,6 @@
 		margin-left: 10px;
 	}
 	.carousel {
-		transform: scale(0.65);
+		transform: scale(0.6);
 	}
 }

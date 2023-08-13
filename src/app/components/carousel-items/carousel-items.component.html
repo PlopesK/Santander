@@ -2,16 +2,16 @@
 <div class="carousel-container">
 	<div class="carousel">
 		<div class="carousel-item" *ngFor="let item of visibleItems; let i = index">
-			<figure class="square">
+			<figure class="square" @swipe>
 				<div class="icon"><img src="{{ item.icon }}" /></div>
 				<div class="text">{{ item.text }}</div>
 			</figure>
 		</div>
 	</div>
 	<div class="sc-flex-arrow sc-prev-arrow-order">
-		<a class="sc-prev" (click)="moveLeft()">&#10094;</a>
+		<button class="sc-prev" (click)="moveLeft()">&#10094;</button>
 	</div>
 	<div class="sc-flex-arrow sc-next-arrow-order">
-		<a class="sc-next" (click)="moveRight()">&#10095;</a>
+		<button class="sc-next" (click)="moveRight()">&#10095;</button>
 	</div>
 </div>

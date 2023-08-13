@@ -8,6 +8,7 @@
 	font-weight: bold;
 	font-size: 18px;
 	transition: 0.5s ease;
+	text-decoration: none;
 }
 
 .sc-next {
@@ -41,5 +42,5 @@
 }
 
 .sc-flex-arrow:active {
-	transform: scale(0.9) !important; /* Safari */
+	transform: scale(0.9) !important;
 }

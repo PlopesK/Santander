@@ -6,7 +6,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 	templateUrl: './carousel-items.component.html',
 	styleUrls: ['./carousel-items.component.css', './carousel.scss'],
 	animations: [
-		trigger('carouselAnimation', [
+		trigger('swipe', [
 			transition(':increment, :decrement', [
 				style({ transform: 'translateX({{ i * 100 }}%)' }),
 				animate(

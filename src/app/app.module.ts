@@ -13,6 +13,7 @@ import { CarouselItemsComponent } from './components/carousel-items/carousel-ite
 import { AmountBoxComponent } from './components/amount-box/amount-box.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PresentationComponent } from './components/presentation/presentation.component';
 
 @NgModule({
 	declarations: [
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		CarouselItemsComponent,
 		AmountBoxComponent,
 		FooterComponent,
+		PresentationComponent,
 	],
 	imports: [
 		BrowserModule,
