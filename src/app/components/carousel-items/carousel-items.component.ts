@@ -25,27 +25,27 @@ export class CarouselItemsComponent {
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-16_181417_M_icon-compre-sua-casa.svg',
 		},
 		{
-			text: 'Conta Corrente',
+			text: 'Account',
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-24_171817_M_icon-abra-sua-conta.svg',
 		},
 		{
-			text: 'Transferências',
+			text: 'Transfers',
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-16_181316_M_icon-portabilidade-santander.svg',
 		},
 		{
-			text: 'Pagamentos',
+			text: 'Payments',
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-24_171509_M_icon-renegocie-sua-divida.svg',
 		},
 		{
-			text: 'Cartões',
+			text: 'Cards',
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-24_171937_M_icon-peca-seu-cartao.svg',
 		},
 		{
-			text: 'Empréstimos',
+			text: 'Lending',
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/22-08-16_180926_M_icon-emprestimo-para-voce.svg',
 		},
 		{
-			text: 'Outros',
+			text: 'Others',
 			icon: 'https://www.santander.com.br/sites/WPC_CMS/imagem/21-06-11_134956_M_ic-id-santander.svg',
 		},
 	];
