@@ -8,12 +8,32 @@
 	width: 100%;
 	overflow: hidden;
 	border-radius: 0.5em;
+
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(173, 173, 173, 1);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(173, 173, 173, 1);
+	box-shadow: 4px 4px 5px 0px rgba(173, 173, 173, 1);
+}
+
+a {
+	z-index: 10;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+p {
+	font-size: medium;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 .slide {
 	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;

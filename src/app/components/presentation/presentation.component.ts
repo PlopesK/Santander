@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { trigger, transition, useAnimation } from '@angular/animations';
+import { fadeIn, fadeOut } from './presentation.anim';
 
 @Component({
 	selector: 'app-presentation',
@@ -7,25 +8,24 @@ import { trigger, transition, style, animate } from '@angular/animations';
 	styleUrls: ['./presentation.component.scss'],
 	animations: [
 		trigger('carouselAnimation', [
-			transition('void => *', [
-				style({ opacity: 0 }),
-				animate('300ms', style({ opacity: 1 })),
-			]),
-			transition('* => void', [animate('300ms', style({ opacity: 0 }))]),
+			transition('void => *', [useAnimation(fadeIn)]),
+			transition('* => void', [useAnimation(fadeOut)]),
 		]),
 	],
 })
 export class PresentationComponent {
 	public slides = [
 		{
-			src: 'https://images.unsplash.com/photo-1565622871630-8e453c4b6ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80',
+			src: 'https://cdn.wallpapersafari.com/24/98/PwS8MU.jpg',
 		},
 		{
-			src: 'https://images.unsplash.com/photo-1565622871630-8e453c4b6ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80',
+			src: 'https://www.pny.com/image%20library/gaming/wallpapers/wallpaper%202/wallpaper-2-3840x2160.jpg',
 		},
-		{ src: 'https://image3.com' },
 		{
-			src: 'https://images.unsplash.com/photo-1565622871630-8e453c4b6ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80',
+			src: 'https://www.pixelstalk.net/wp-content/uploads/images5/4K-Red-Wallpaper-HD-Free-download.jpg',
+		},
+		{
+			src: 'https://www.pixelstalk.net/wp-content/uploads/images6/Red-Desktop-Wallpaper-4K-City-Night.jpg',
 		},
 	];
 	currentSlide = 0;
