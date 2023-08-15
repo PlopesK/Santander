@@ -15,15 +15,6 @@ import { fadeIn, fadeOut, scaleIn, scaleOut } from './presentation.anim';
 				useAnimation(fadeOut, { params: { time: '1300ms' } }),
 			]),
 		]),
-		trigger('slideAnimation', [
-			/* scale */
-			transition('void => *', [
-				useAnimation(scaleIn, { params: { time: '500ms' } }),
-			]),
-			transition('* => void', [
-				useAnimation(scaleOut, { params: { time: '500ms' } }),
-			]),
-		]),
 	],
 })
 export class PresentationComponent {

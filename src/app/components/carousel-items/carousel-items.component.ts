@@ -56,10 +56,17 @@ export class CarouselItemsComponent {
 	}
 
 	updateVisibleItems() {
+		this.preloadImages();
 		this.visibleItems = this.items.slice(
 			this.activeIndex,
 			this.activeIndex + 3
 		);
+	}
+
+	preloadImages() {
+		for (const item of this.items) {
+			new Image().src = item.icon;
+		}
 	}
 
 	moveLeft() {
