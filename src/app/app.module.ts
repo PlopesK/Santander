@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './modules/app-routing.module';
 
@@ -14,6 +14,8 @@ import { AmountBoxComponent } from './components/amount-box/amount-box.component
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationComponent } from './components/presentation/presentation.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
 	declarations: [
@@ -25,6 +27,7 @@ import { PresentationComponent } from './components/presentation/presentation.co
 		AmountBoxComponent,
 		FooterComponent,
 		PresentationComponent,
+		LoadingComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -32,7 +35,10 @@ import { PresentationComponent } from './components/presentation/presentation.co
 		SvgComponentsModule,
 		HttpClientModule,
 		BrowserAnimationsModule,
+		NgxSpinnerModule,
 	],
+	exports: [NgxSpinnerModule],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	providers: [],
 	bootstrap: [AppComponent],
 })
