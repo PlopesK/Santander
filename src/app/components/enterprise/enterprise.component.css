@@ -1,0 +1,70 @@
+.docked-at-corner {
+	position: relative;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 5px 25px;
+	background-color: white;
+	justify-content: center;
+
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(173, 173, 173, 1);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(173, 173, 173, 1);
+	box-shadow: 4px 4px 5px 0px rgba(173, 173, 173, 1);
+	text-align: justify;
+}
+
+.docked-at-corner__docker {
+	position: absolute;
+	transform: translate(50%, -50%);
+	background-color: #c00;
+	top: 0;
+	left: 0;
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border-radius: 9999px;
+	width: 14px;
+	height: 15px;
+}
+
+p {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0px 20px;
+}
+
+button {
+	text-decoration: none;
+	color: white;
+	background-color: #c00;
+	padding: 0.7rem 3rem !important;
+	text-align: center;
+	border-radius: 4px;
+	margin-right: 1rem;
+	cursor: pointer;
+	font-size: 16px;
+	height: 50%;
+}
+
+@media (max-width: 800px) {
+	.column {
+		width: 100%;
+		margin: 20px 40px;
+	}
+}

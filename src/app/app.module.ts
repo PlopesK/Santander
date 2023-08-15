@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingComponent } from './components/loading/loading.component';
+import { EnterpriseComponent } from './components/enterprise/enterprise.component';
 
 @NgModule({
 	declarations: [
@@ -28,6 +29,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 		FooterComponent,
 		PresentationComponent,
 		LoadingComponent,
+  EnterpriseComponent,
 	],
 	imports: [
 		BrowserModule,

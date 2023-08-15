@@ -1,6 +1,13 @@
 .amount-box-container {
 	border-radius: 12px;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	height: 220px;
 	width: 400px;
+	display: flex;
+	justify-content: space-around;
+}
+
+p {
+	font-weight: bold;
+	font-size: 18px;
 }
